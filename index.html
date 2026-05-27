@@ -315,6 +315,62 @@ header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top
   <footer style="background: var(--dark); color: var(--white); text-align: center; padding: 20px; font-size: 14px; margin-top: 60px;">
     <p>&copy; 2026 VAULT STORE - Haiti. Tous droits réservés.</p>
   </footer>
+<div style="text-align: center; margin-top: 50px; padding: 20px; background: #0f172a;">
+    <button onclick="connexionChef()" style="background: transparent; color: #64748b; border: 1px dashed #475569; padding: 10px 20px; border-radius: var(--radius); cursor: pointer; font-size: 13px;">
+      🔒 Connexion Propriétaire (Accès Restreint)
+    </button>
+  </div>
 
+  <div id="barre-reglages" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #1e293b; color: white; padding: 15px; text-align: center; font-weight: bold; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); z-index: 9999; border-top: 3px solid var(--blue);">
+    <span>⚡ MODE PROPRIÉTAIRE : Modifiez les textes, prix ou numéros directement à l'écran.</span>
+    <button onclick="enregistrerCatalogue()" style="background: var(--blue); color: white; border: none; padding: 8px 15px; border-radius: 5px; margin-left: 15px; font-weight: bold; cursor: pointer;">
+      💾 Enregistrer le Catalogue
+    </button>
+    <button onclick="fermerReglages()" style="background: #ef4444; color: white; border: none; padding: 8px 10px; border-radius: 5px; margin-left: 10px; cursor: pointer;">
+      Quitter
+    </button>
+  </div>
+
+  <script>
+    // LE MOT DE PASSE SECRET : Tu peux le changer entre les guillemets
+    const MOT_DE_PASSE_PROPRIETAIRE = "VaultChef2026";
+
+    // Fonction pour ouvrir les réglages avec le code
+    function connexionChef() {
+      let codeEntre = prompt("🔑 Entrez le code secret pour modifier le catalogue :");
+      
+      if (codeEntre === MOT_DE_PASSE_PROPRIETAIRE) {
+        alert("🔓 Code correct ! Bienvenue Chef. Vous pouvez maintenant cliquer sur les textes et les prix pour les changer.");
+        activerModeEdition();
+      } else if (codeEntre !== null) {
+        alert("❌ Code incorrect. Accès refusé !");
+      }
+    }
+
+    // Active la modification en direct sur l'écran
+    function activerModeEdition() {
+      document.body.contentEditable = "true";
+      
+      // Sécurité pour ne pas abîmer la barre de réglages elle-même
+      const barre = document.getElementById("barre-reglages");
+      if (barre) {
+        barre.style.display = "block";
+        barre.contentEditable = "false";
+      }
+    }
+
+    // Action du bouton Enregistrer
+    function enregistrerCatalogue() {
+      // ÉTAPE PROCHAINE : Ici on connectera le site à internet pour sauvegarder pour TOUT LE MONDE.
+      alert("✅ Modifications lues par le système ! Pour que ça change sur tout internet pour vos clients, nous allons lier votre base de données à l'étape suivante.");
+    }
+
+    // Fermer et verrouiller le site
+    function fermerReglages() {
+      document.body.contentEditable = "false";
+      document.getElementById("barre-reglages").style.display = "none";
+      location.reload();
+    }
+  </script>
 </body>
   </html>
