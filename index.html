@@ -238,5 +238,83 @@ header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top
   </style>
 </head>
 <body>
+
+  <header style="background: var(--white); border-bottom: 1px solid var(--border); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
+    <div style="font-size: 20px; font-weight: 800; color: var(--dark); letter-spacing: 1px;">VAULT STORE</div>
+    <nav style="display: flex; gap: 20px;">
+      <a href="#" style="text-decoration: none; color: var(--text); font-weight: 500;">Accueil</a>
+      <a href="#" style="text-decoration: none; color: var(--muted);">Produits</a>
+      <a href="#" style="text-decoration: none; color: var(--muted);">Contact</a>
+    </nav>
+    <button style="background: var(--blue); color: var(--white); border: none; padding: 8px 16px; border-radius: var(--radius); font-weight: 600; cursor: pointer;">
+      Panier (0)
+    </button>
+  </header>
+
+  <section style="background: var(--bg); padding: 60px 20px; text-align: center; border-bottom: 1px solid var(--border);">
+    <h1 style="color: var(--dark); font-size: 32px; font-weight: 800; margin-bottom: 10px;">Bienvenue chez Vault Store Haiti</h1>
+    <p style="color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto;">Découvrez nos meilleurs articles de mode aux meilleurs prix, directement livrés chez vous.</p>
+  </section>
+
+  <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+    <h2 style="color: var(--dark); font-size: 24px; font-weight: 700; margin-bottom: 20px;">Nos Articles Vedettes</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+      
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;">
+        <div style="background: #e2e8f0; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--muted);">[ Image Produit 1 ]</div>
+        <div style="padding: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: var(--dark); font-size: 18px; margin-bottom: 5px;">Chemise Élégante</h3>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 15px; flex-grow: 1;">Chemise en coton de haute qualité, idéale pour le travail ou les sorties.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: var(--blue); font-size: 18px;">2,500 HTG</span>
+            <button style="background: var(--dark); color: var(--white); border: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer; font-size: 14px;">Acheter</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;">
+        <div style="background: #e2e8f0; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--muted);">[ Image Produit 2 ]</div>
+        <div style="padding: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: var(--dark); font-size: 18px; margin-bottom: 5px;">Montre Classique</h3>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 15px; flex-grow: 1;">Une montre intemporelle pour sublimer tous vos styles quotidiens.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: var(--blue); font-size: 18px;">4,200 HTG</span>
+            <button style="background: var(--dark); color: var(--white); border: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer; font-size: 14px;">Acheter</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;">
+        <div style="background: #e2e8f0; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--muted);">[ Image Produit 3 ]</div>
+        <div style="padding: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: var(--dark); font-size: 18px; margin-bottom: 5px;">Chaussures de Sport</h3>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 15px; flex-grow: 1;">Légères, confortables et parfaites pour vos séances de sport ou la marche.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: var(--blue); font-size: 18px;">5,000 HTG</span>
+            <button style="background: var(--dark); color: var(--white); border: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer; font-size: 14px;">Acheter</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;">
+        <div style="background: #e2e8f0; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--muted);">[ Image Produit 4 ]</div>
+        <div style="padding: 15px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: var(--dark); font-size: 18px; margin-bottom: 5px;">Sac à Dos Moderne</h3>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 15px; flex-grow: 1;">Idéal pour transporter votre ordinateur portable et vos effets en sécurité.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: var(--blue); font-size: 18px;">3,100 HTG</span>
+            <button style="background: var(--dark); color: var(--white); border: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer; font-size: 14px;">Acheter</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer style="background: var(--dark); color: var(--white); text-align: center; padding: 20px; font-size: 14px; margin-top: 60px;">
+    <p>&copy; 2026 VAULT STORE - Haiti. Tous droits réservés.</p>
+  </footer>
+
 </body>
-</html>
+  </html>
